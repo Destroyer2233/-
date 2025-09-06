@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Мій сайт</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background: #000; /* фон навколо */
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://learn.logikaschool.com/uploads/student/3131910/68bc319559b36.JPG" alt="Скрін сайту">
+</body>
+</html>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("Сайт завантажено, ініціалізація...");
+    initSite();
+});
+
+function initSite() {
+    let elements = document.querySelectorAll(".feature");
+    elements.forEach(el => {
+        el.dataset.status = "inactive";
+    });
+}
+
+function calculateSomething(a, b) {
+    return a + b;
+}
+
+setInterval(() => {
+    let t = new Date().toLocaleTimeString();
+    console.log("Час: " + t);
+}, 5000);
+</script>
